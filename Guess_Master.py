@@ -10,7 +10,7 @@ if decision<1:
 else:
     chance=decision
 while chance>0:#executing the loop 
-    c = random.randint(a, b) #generating random number
+    c = random.randint(min(a,b),max(a,b)) #generating random number
     print("chances remaining : {}".format(chance)) #displaying chances
     d = int(input("Guess the number : ")) #asking user to guess the number
     chance=chance-1 #decrementing chances
