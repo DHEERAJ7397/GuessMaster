@@ -2,8 +2,14 @@ import random
 #Defining the range of numbers 
 a = int(input("Enter the range of numbers\nstarting from the range : "))
 b = int(input("ending till the range : "))
-chance = 5#declaring chance = 5
-while chance>0:#executing the loop for 5 times
+#deciding chances
+decision=abs(max(a,b))*0.05
+decision=int(decision)+1
+if decision<1:
+    chance=1
+else:
+    chance=decision
+while chance>0:#executing the loop 
     c = random.randint(a, b) #generating random number
     print("chances remaining : {}".format(chance)) #displaying chances
     d = int(input("Guess the number : ")) #asking user to guess the number
